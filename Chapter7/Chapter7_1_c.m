@@ -1,0 +1,11 @@
+syms t;
+T=1/8192;
+omega=2*pi*1000;
+n=0:8192;
+x1=sin(omega*t);
+xn=sin(omega*n*T);
+[X,w]=ctfts(xn,T);
+subplot(2,1,1);
+plot(w,abs(X)),title('X的幅值');
+subplot(2,1,2);
+plot(w,angle(X)),title('X的相位');

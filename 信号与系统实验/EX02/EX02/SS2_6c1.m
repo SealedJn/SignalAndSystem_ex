@@ -1,0 +1,10 @@
+x = [1 5 2 4 -2 2];
+for i=-3:3;
+    h(i+4) = 1 - abs(i)/3;
+end;
+nx = [0:5];
+nh = [-3:3];
+subplot(2,1,1);
+stem(nx,x);grid;legend('x');
+subplot(2,1,2);
+stem(nh,h);grid;legend('h');

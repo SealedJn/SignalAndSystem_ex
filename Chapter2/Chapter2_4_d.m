@@ -1,0 +1,12 @@
+x1=[1 1 1 1 1 0 0 0 0 0];
+h1=[1 -1 3 0 1];
+h2=[0 2 5 4 -1];
+w=conv(h1,x1);
+yd1=conv(h2,w);
+hs=conv(h1,h2);
+yd2=conv(hs,x1);
+n=0:17;
+subplot(1,2,1);
+stem(n,yd1);
+subplot(1,2,2);
+stem(n,yd2);

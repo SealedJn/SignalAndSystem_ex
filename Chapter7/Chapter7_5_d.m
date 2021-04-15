@@ -1,0 +1,11 @@
+n = -127:127;
+A = [1,0.75,1];
+B = [1,-1];
+x = sinc(n/8);
+y = filter(B,A,x);
+subplot(2,1,1);
+stem(n,x);
+title('系统输入');
+subplot(2,1,2);
+stem(n,y);
+title('系统输出');

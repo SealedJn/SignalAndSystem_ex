@@ -1,0 +1,11 @@
+n = 0:124;
+x1 = sinc(0.4*(n-62)).*sinc(0.4*(n-62));
+x2 = sinc(0.2*(n-62)).*sinc(0.2*(n-62));
+subplot(2,1,1);
+stem(n,x1);
+grid;
+title('x1[n]');
+subplot(2,1,2);
+stem(n,x2);
+grid;
+title('x2[n]');

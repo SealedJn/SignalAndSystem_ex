@@ -1,0 +1,20 @@
+x1 = [1 0 0 0 0 0];
+x2 = [0 1 0 0 0 0];
+x3 = [1 2 0 0 0 0];
+z1 = SS2_5a_z(x1);
+z2 = SS2_5a_z(x2);
+z3 = SS2_5a_z(x3);
+for n = 1:length(x1),nz(n) = n-1;
+end
+subplot(2,2,1);
+stem(nz,z1);
+legend('z1');
+subplot(2,2,2);
+stem(nz,z2);
+legend('z2');
+subplot(2,2,3);
+stem(nz,z3);
+legend('z3');
+subplot(2,2,4);
+stem(nz,z1+2*z2);
+legend('z1+2*z2');

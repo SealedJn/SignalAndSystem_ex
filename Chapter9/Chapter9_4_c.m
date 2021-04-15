@@ -1,0 +1,12 @@
+b = [4];
+a = [1 2 17];
+omega = [-10:0.5:10];
+sigma = -1+(1/8)*(1:32);
+[sigmagrid,omegagrid] = meshgrid(sigma,omega);
+sgrid = sigmagrid+j*omegagrid;
+H1 = polyval(b,sgrid)./polyval(a,sgrid);
+mesh(sigma,omega,abs(H1));
+hold on;
+plot3(zeros(1,41),omega,abs(H1(:,8)) + 0.05,'c');
+title('H1(s)所定义的曲面');
+hold off;

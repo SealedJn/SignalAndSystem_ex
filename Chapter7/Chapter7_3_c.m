@@ -1,0 +1,18 @@
+N = 2048;
+n = 0:2047;
+x1 = sinc(0.4*(n-62)).*sinc(0.4*(n-62));
+x2 = sinc(0.2*(n-62)).*sinc(0.2*(n-62));
+xe1 = zeros(1,3*length(x1));
+xe1(1:3:length(xe1))=x1;
+xe2 = zeros(1,3*length(x2));
+xe2(1:3:length(xe2))=x2;
+Xe1 = fft(xe1,N);
+Xe2 = fft(xe2,N);
+subplot(2,1,1);
+plot(n,Xe1);
+grid;
+title('Xe1');
+subplot(2,1,2);
+plot(n,Xe2);
+grid;
+title('Xe2');

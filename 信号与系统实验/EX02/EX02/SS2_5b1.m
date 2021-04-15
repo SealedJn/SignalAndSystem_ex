@@ -1,0 +1,20 @@
+x1 = [1 0 0 0 0 0];
+x2 = [0 1 0 0 0 0];
+x3 = [1 2 0 0 0 0];
+y1 = SS2_5a_y(x1);
+y2 = SS2_5a_y(x2);
+y3 = SS2_5a_y(x3);
+for n = 1:length(x1),ny(n) = n-1;
+end
+subplot(2,2,1);
+stem(ny,y1);
+legend('y1');
+subplot(2,2,2);
+stem(ny,y2);
+legend('y2');
+subplot(2,2,3);
+stem(ny,y3);
+legend('y3');
+subplot(2,2,4);
+stem(ny,y1+2*y2);
+legend('y1+2*y2');

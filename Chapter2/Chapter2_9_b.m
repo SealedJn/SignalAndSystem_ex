@@ -1,0 +1,12 @@
+t=0:0.05:4;
+b=1;
+a=[1 3];
+x=ones(1,length(t));
+s1=lsim(b,a,x,t);
+s=step(b,a,t);
+h=impulse(b,a,t);
+%plot(t,s1,'g',t,s,'r',t,h);
+subplot(1,2,1);
+plot(s,'r'),title('s');
+subplot(1,2,2);
+plot(h,'b'),title('h');

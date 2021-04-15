@@ -1,0 +1,28 @@
+alp1 = [8 8 4 1 0];
+blp1 = [2 -2];
+alp2 = [8 8 4 1];
+blp2 = [2 -2];
+[Hb w] = freqs(blp1, alp1, 1024);
+[Ha w] = freqs(blp2, alp2, 1024);
+subplot(2,1,1);
+plot(w, abs(Hb), '.');
+xlabel('\omega');
+ylabel('|H_b_1_p(j\omega)|');
+subplot(2,1,2)
+plot(w, abs(Ha), '.');
+xlabel('\omega');
+ylabel('|H_a_1_p(j\omega)|');
+Haz = roots(blp1);
+Hap = roots(alp1);
+Hbz = roots(blp2);
+Hbp = roots(alp2);
+subplot(2,1,1);
+plot(real(Haz), imag(Haz), 'o');
+hold on;
+plot(real(Hap), imag(Hap), 'x');
+grid;
+subplot(2,1,2);
+plot(real(Hbz), imag(Hbz), 'o');
+hold on;
+plot(real(Hbp), imag(Hbp), 'x');
+grid;

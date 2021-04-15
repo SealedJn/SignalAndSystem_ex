@@ -1,0 +1,12 @@
+N=6;
+n=[0:0.1:12];
+n1=[0:0.1:24];
+x1=cos((2*pi*n)/N)+2*cos((3*pi*n)/N);
+x2=2*cos((2*n1)/N)+cos((3*n1)/N);
+x3=cos((2*pi*n1)/N)+3*sin((5*pi*n1)/2*N);
+subplot(2,2,1);
+stem(n,x1),title('x1[n]'),xlabel('n'),ylabel('x[n]');
+subplot(2,2,2);
+stem(n1,x2),title('x2[n]'),xlabel('n'),ylabel('x[n]');
+subplot(2,2,3);
+stem(n1,x3),title('x3[n]'),xlabel('n'),ylabel('x[n]');

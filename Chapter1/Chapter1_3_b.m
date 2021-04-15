@@ -1,0 +1,10 @@
+m=[-3:1:7];
+x=[zeros(1,3) 2 0 1 -1 3 zeros(1,3)];
+subplot(2,2,1);
+stem(m+2,x),title('y1');
+subplot(2,2,2);
+stem(m-1,x),title('y1');
+subplot(2,2,3);
+stem(-m,x),title('y1');
+subplot(2,2,4);
+stem(m-1,x),title('y1');

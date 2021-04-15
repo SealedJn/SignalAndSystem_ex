@@ -1,0 +1,14 @@
+n = -127:127;
+y2 = filter(B,A,y);
+subplot(3,1,1);
+stem(n,x);
+title('x');
+subplot(3,1,2);
+stem(n,y);
+title('y');
+subplot(3,1,3);
+stem(n,y2);
+title('y2');
+h2 = conv(n,h);
+figure;
+stem(h2);

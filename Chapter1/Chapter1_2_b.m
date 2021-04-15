@@ -1,0 +1,13 @@
+N=5;
+n=[0:0.1:9];
+k1=1;
+k2=2;
+k3=4;
+k4=6;
+x1=sin((2*pi*k1*n)/N);
+x2=sin((2*pi*k2*n)/N);
+x3=sin((2*pi*k3*n)/N);
+x4=sin((2*pi*k4*n)/N);
+plot(n,x1,'r',n,x2,'g',n,x3,'b',n,x4,'y'),legend('k=1','k=2','k=4','k=6');
+xlabel('n');
+ylabel('x[n]');

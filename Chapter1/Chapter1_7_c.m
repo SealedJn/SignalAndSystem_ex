@@ -1,0 +1,16 @@
+t=-6:0.01:6;
+subplot(5,1,1);
+y1=(-t).*(-t>0)-(-t).*(-t>2);
+plot(t,y1),title('-t(Heaviside(-t)-Heaviside(-t-2))');
+subplot(5,1,2);
+y2=(t+1).*(t+1>0)-(t+1).*(t+1>2);
+plot(t,y2),title('-(t+1)(Heaviside(t-1)-Heaviside(t+1))');
+subplot(5,1,3);
+y3=(t-3).*(t-3>0)-(t-3).*(t-3>2);
+plot(t,y3),title('(t-3)(Heaviside(t-3)-Heaviside(t-5))');
+subplot(5,1,4);
+y4=(-t+1).*(-t+1>0)-(-t+1).*(-t+1>2);
+plot(t,y4),title('(t-1)(Heaviside(-t-1)-Heaviside(1-t))');
+subplot(5,1,5);
+y5=(-2*t+1).*(-2*t+1>0)-(-2*t+1).*(-2*t+1>2);
+plot(t,y5),title('(2t-1)(Heaviside(-2t-1)-Heaviside(1-2t-2))');

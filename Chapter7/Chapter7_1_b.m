@@ -1,0 +1,10 @@
+syms t;
+T=1/8192;
+omega=2*pi*1000;
+n=0:49;
+x1=sin(omega*t);
+xn=sin(omega*n*T);
+subplot(2,1,1);
+stem(n,xn);
+subplot(2,1,2);
+ezplot(x1);

@@ -1,0 +1,24 @@
+syms r;
+n=-16:16;
+Ti=1/8;
+t=Ti*n;
+w0=8*pi/5;
+x1=cos(w0*t);
+x2=(1-abs(t)/2).*(heaviside(t+2)-heaviside(t-2));
+wc=1.1*w0;
+hb1=T*sin(wc*t)/pi;
+f2=0;
+for n = -16:16
+    t = Ti*n;
+    x1 = cos(w0*t);
+    f1(n+17) = Ti*wc*x1*sin(wc*(r-t))/((wc*(r-t)+eps)*pi);
+    f2 = f1(n+17)+f2;
+end;
+subplot(2,1,1);
+ezplot(f2),title('抽样前波形');
+subplot(2,1,2);
+n=-16:16;
+Ti=1/8;
+t=Ti*n;
+x1=cos(w0*t);
+stem(t,x1),title('抽样后波形');

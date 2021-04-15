@@ -1,0 +1,15 @@
+a = [1 1 16.25];
+ps = roots(a);
+subplot(2,1,1);
+plot(real(ps),imag(ps),'x');
+title('极点图');
+grid;
+axis([-6 6 -6 6]);
+b = [4];
+a = [1 1 16.25];
+w = [-10:0.5:10];
+H1 = freqz(b,a,41);
+subplot(2,1,2);
+plot(w,H1);
+title('频率响应');
+grid;

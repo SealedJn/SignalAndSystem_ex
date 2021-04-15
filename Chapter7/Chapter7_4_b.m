@@ -1,0 +1,12 @@
+T = 1/8192;
+min = -pi/T;
+max = pi/T;
+N = 8192;
+n = 0:8191;
+t0 = 0.5;
+t = linspace(0,t0,t0/T);
+x = cos(min*t+(max-min).*t.*t/(2*t0));
+X = fft(x,N);
+plot(n,X);
+xlabel('个数n');
+ylabel('样本X');
